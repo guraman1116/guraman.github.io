@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダウンロード - KagamiPalette</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero" style="min-height: 80vh; display: flex; align-items: center;">
+        <div class="container">
+            <h1 style="margin-bottom: 10px;">KagamiPalette</h1>
+            <p class="tagline">読書を彩る、あなただけの記録アプリ</p>
+
+            <div class="download-options">
+                <!-- iOS / App Store -->
+                <a href="#" class="btn-store btn-ios disabled" aria-disabled="true">
+                    <i class="fab fa-apple fa-3x store-icon" style="font-size: 2em;"></i>
+                    <div class="store-text">
+                        <span class="store-text-small">Download on the</span>
+                        <span class="store-text-large">App Store</span>
+                        <span class="store-text-small" style="margin-top: 2px; color: #ccc;">(準備中)</span>
+                    </div>
+                </a>
+
+                <!-- Android / GitHub -->
+                <a href="https://github.com/guraman1116/kgm-palette-mobile/releases" target="_blank"
+                    class="btn-store btn-apk">
+                    <i class="fab fa-github fa-3x store-icon" style="font-size: 2em;"></i>
+                    <div class="store-text">
+                        <span class="store-text-small">Get .apk from</span>
+                        <span class="store-text-large">GitHub Releases</span>
+                    </div>
+                </a>
+            </div>
+
+            <p class="description" style="margin-top: 40px; font-size: 0.9rem;">
+                ※ iOS版は現在準備中です。公開まで今しばらくお待ちください。<br>
+                ※ Android版はGitHub ReleasesよりAPKファイルをダウンロードしてインストールしてください。
+            </p>
+
+            <div style="margin-top: 20px;">
+                <a href="#install-guide" style="color: #e67e22; text-decoration: underline; font-size: 0.9rem;">
+                    <i class="fas fa-question-circle"></i> Android版のインストール方法はこちら
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="install-guide" id="install-guide">
+        <div class="container">
+            <h2>Android版 (APK) インストール手順</h2>
+
+            <ol class="step-list">
+                <li class="step-item">
+                    <span class="step-title">APKをダウンロード</span>
+                    <p>上の「GitHub Releases」ボタンをタップし、最新バージョンの <strong>Assets</strong> から <code>.apk</code>
+                        ファイルをダウンロードしてください。</p>
+                </li>
+                <li class="step-item">
+                    <span class="step-title">ファイルを開く</span>
+                    <p>ダウンロード完了通知、またはファイルマネージャーからダウンロードしたAPKファイルを開きます。</p>
+                </li>
+                <li class="step-item">
+                    <span class="step-title">インストールを許可</span>
+                    <p>「提供元不明のアプリ」という警告が出た場合は、設定へ進み「この提供元のアプリを許可」をオンにしてください。</p>
+                </li>
+                <li class="step-item">
+                    <span class="step-title">インストール完了</span>
+                    <p>インストールボタンを押し、完了すればアプリを起動できます。</p>
+                </li>
+            </ol>
+
+            <div class="note-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> 注意事項</strong><br>
+                Playプロテクトにより警告が表示される場合がありますが、開発版のためです。「詳細」→「インストールする」を選択して進めてください。
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="index.html"
+                    style="color: #666; text-decoration: none; border: 1px solid #ccc; padding: 10px 20px; border-radius: 20px; transition: background 0.3s;">
+                    &larr; トップページに戻る
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cta" style="padding: 40px 0;">
+        <div class="container">
+            <p class="copyright" style="margin-top: 0; border: none;">&copy; 2025 KagamiPalette</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
