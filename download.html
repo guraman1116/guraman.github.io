@@ -12,7 +12,7 @@
 <body>
 
     <header class="hero" style="min-height: 80vh; display: flex; align-items: center;">
-        <div class="container">
+        <div class="container" style="flex-direction: column;">
             <h1 style="margin-bottom: 10px;">KagamiPalette</h1>
             <p class="tagline">読書を彩る、あなただけの記録アプリ</p>
 
@@ -95,6 +95,41 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const repoOwner = 'guraman1116';
+            const repoName = 'guraman.github.io';
+            const tag = 'KagamiPalette'; // User specified tag
+            const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/releases/tags/${tag}`;
+            const btnApk = document.querySelector('.btn-apk');
+            const storeTextLarge = btnApk.querySelector('.store-text-large');
+            const storeTextSmall = btnApk.querySelector('.store-text-small');
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    const apkAsset = data.assets.find(asset => asset.name.endsWith('.apk'));
+                    if (apkAsset) {
+                        btnApk.href = apkAsset.browser_download_url;
+                        // Update text to show version or file size if available, 
+                        // or just keep "GitHub Releases" but maybe append version?
+                        // For now, let's keep "GitHub Releases" as the main text 
+                        // but maybe update the small text to indicate it's found.
+                        storeTextLarge.textContent = `Download APK`;
+                        // e.g. "v1.0.0 (25MB)"
+                        const sizeMB = (apkAsset.size / (1024 * 1024)).toFixed(1);
+                        storeTextSmall.textContent = `${data.name || data.tag_name} (${sizeMB} MB)`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching release:', error);
+                    // Fallback is already the releases page, so no action needed.
+                });
+        });
+    </script>
 </body>
 
 </html>
