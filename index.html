@@ -5,26 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KagamiPalette - 読書を彩る、あなただけの記録アプリ</title>
+    <meta name="description" content="KagamiPaletteは、毎日の読書を記録し、モチベーションを高めるためのシンプルで美しい読書管理アプリです。読書体験を自分色に彩りましょう。">
+    <meta name="keywords" content="読書記録, 読書管理, アプリ, KagamiPalette, 読書習慣">
+    <meta property="og:title" content="KagamiPalette - 読書を彩る、あなただけの記録アプリ">
+    <meta property="og:description" content="毎日の読書を記録し、モチベーションを高めるためのシンプルで美しい読書管理アプリ。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guraman.github.io/">
+    <meta property="og:image" content="https://guraman.github.io/assets/ogp.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <header class="hero">
         <div class="container">
-            <h1>KagamiPalette</h1>
-            <p class="tagline">読書を彩る、あなただけの記録アプリ</p>
-            <p class="description">
-                KagamiPalette（カガミパレット）は、毎日の読書を記録し、<br>モチベーションを高めるためのシンプルで美しい読書管理アプリです。<br>
-                あなたの感情や思考を「パレット」のように彩り、読書体験をより豊かに演出します。
-            </p>
-            <a href="download.html" class="btn-download">アプリをダウンロード</a>
+            <div class="hero-text">
+                <h1>KagamiPalette</h1>
+                <p class="tagline">読書を彩る、あなただけの記録アプリ</p>
+                <p class="description">
+                    毎日の読書を記録し、モチベーションを高める。<br>
+                    感情や思考をパレットのように彩り、<br>
+                    あなただけの読書の世界を広げましょう。
+                </p>
+                <a href="download.html" class="btn-download">アプリをダウンロード</a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <img src="screenshots/index-magenta.png" alt="KagamiPalette App Screen" class="phone-screen-img">
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="features">
+    <section class="features">
         <div class="container">
             <h2>主な機能</h2>
+
+            <!-- Bookshelf Preview Section -->
+            <div style="margin-bottom: 60px; text-align: center;">
+                <h3>読んだ本が積み重なる「本棚」</h3>
+                <p style="margin-bottom: 30px; color: #666;">読了した本は美しい背表紙となって本棚に並びます。<br>テーマごとの配色で、コレクションする楽しさを。</p>
+
+                <div class="bookshelf-row"
+                    style="max-width: 600px; margin: 0 auto 40px; justify-content: center; background: #fffcf5;">
+                    <!-- Mock Books -->
+                    <div class="book-spine" style="background: linear-gradient(to right, #8c6b4a, #dccdb3);">吾輩は猫である
+                    </div>
+                    <div class="book-spine" style="background: linear-gradient(to right, #5f4b32, #8c6b4a);">坊っちゃん</div>
+                    <div class="book-spine" style="background: linear-gradient(to right, #a69076, #dccdb3);">三四郎</div>
+                    <div class="book-spine" style="background: linear-gradient(to right, #8c6b4a, #5f4b32);">それから</div>
+                    <div class="book-spine" style="background: linear-gradient(to right, #dccdb3, #a69076);">門</div>
+                    <div class="book-spine" style="background: linear-gradient(to right, #5f4b32, #dccdb3);">行人</div>
+                    <div class="book-spine" style="background: linear-gradient(to right, #a69076, #5f4b32);">こころ</div>
+                </div>
+            </div>
 
             <div class="feature-grid">
                 <div class="feature-card">
@@ -75,20 +116,45 @@
                 </div>
             </div>
         </div>
-    </main>
+        </main>
 
-    <footer class="cta">
-        <div class="container">
-            <h2>KagamiPalette で、新しい読書習慣を始めませんか？</h2>
-            <p>今日から、あなただけの読書パレットを描き始めましょう。</p>
-            <a href="download.html" class="btn-download secondary">アプリをダウンロード</a>
-            <div style="margin-top: 30px;">
-                <a href="privacy-policy.html"
-                    style="color: #aaa; font-size: 0.9rem; text-decoration: underline;">プライバシーポリシー</a>
+        <main class="gallery-section">
+            <div class="container">
+                <h2>KagamiPaletteの世界</h2>
+                <p style="color: #666; max-width: 600px; margin: 0 auto;">
+                    シンプルで美しいインターフェースが、あなたの読書体験をより豊かに演出します。
+                </p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="screenshots/diary-magenta.png" alt="読書日記">
+                        <div class="gallery-caption">感情を記録する日記</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="screenshots/bookspine.png" alt="本棚">
+                        <div class="gallery-caption">美しく並ぶ背表紙</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="screenshots/tutorial.png" alt="チュートリアル">
+                        <div class="gallery-caption">あなた好みにカスタマイズ</div>
+                    </div>
+                </div>
             </div>
-            <p class="copyright">&copy; 2025 KagamiPalette</p>
-        </div>
-    </footer>
+        </main>
+        <footer class="cta">
+            <div class="container">
+                <h2>KagamiPalette で、新しい読書習慣を始めませんか？</h2>
+                <p>今日から、あなただけの読書パレットを描き始めましょう。</p>
+                <a href="download.html" class="btn-download secondary">アプリをダウンロード</a>
+                <div style="margin-top: 30px;">
+                    <a href="privacy-policy.html"
+                        style="color: #aaa; font-size: 0.9rem; text-decoration: underline;">プライバシーポリシー</a>
+                </div>
+                <p class="copyright">&copy; 2025 KagamiPalette</p>
+            </div>
+        </footer>
+
+
 
 </body>
 
